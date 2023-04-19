@@ -1,8 +1,10 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const port = process.env.PORT || 3000;
 
 app.use(express.json());
+app.use(cors());
 
 app.get("/", (req,res)=>{return res.send("Hello, world!")})
 app.post("/calories", (req, res) => {
@@ -24,10 +26,10 @@ app.post("/calories", (req, res) => {
 
   // Calculate daily calories based on BMR and activity level
   const activityFactors = {
-    lightly_active: 1.375,
-    moderately_active: 1.55,
+    inactive: 1.2,
+    Somewhat_active: 1.375,
+    active: 1.55,
     very_active: 1.725,
-    extra_active: 1.9
   };
   const dailyCalories = bmr * activityFactors[activity_level];
 
