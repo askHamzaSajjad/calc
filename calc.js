@@ -26,8 +26,8 @@ app.post("/calories", (req, res) => {
 
   // Calculate daily calories based on BMR and activity level
   const activityFactors = {
-    inactive: 1.2,
-    Somewhat_active: 1.375,
+    inactive: 1.1,
+    Somewhat_active: 1.2187,
     active: 1.55,
     very_active: 1.725,
   };
