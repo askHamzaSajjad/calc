@@ -4,7 +4,7 @@
   "description": "ITs an amazing package",
   "main": "index.js",
   "scripts": {
-    "start": "node CRUD_P.js",
+    "start": "node calc.js",
     "test": "mocha tests/test.js",
     "dev": "concurrently \"npm run start\" \"npm run test\""
   },
